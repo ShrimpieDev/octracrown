@@ -378,6 +378,7 @@
         // Function to load the crown image
         function loadCrownImage() {
             crownImage = new Image();
+            crownImage.crossOrigin = "Anonymous"; // Fix for Tainted Canvas error
             crownImage.onload = function() {
                 // Initial size and position once the crown image is loaded
                 const container = document.querySelector('.container');
